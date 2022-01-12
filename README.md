@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Rogier, alias @a-nldisr
+- 👋 Hi, I’m Rogier, alias a-nldisr
 - 👀 I’m interested in Golang, Platform engineering and beekeeping
 - 🌱 I love working with Go
 - 📫 How to reach me: Check out linkedin or my website: https://0to1.nl
