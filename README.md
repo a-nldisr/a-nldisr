@@ -1,5 +1,4 @@
 
-
 <a href="https://github.com/a-nldisr">
   <img align="center" width="49%" src="./terminal.svg" />
 </a>

@@ -1,9 +1,12 @@
 ---
 name: 'Metrics'
 on:
-  - pull_request
-  - push
-#  schedule: [{cron: "0 * * * *"}]
+  # Cron schedule every day at 4:20 AM
+  schedule: [{cron: "20 4 * * *"}]
+
+  # Run on push to test branch to trigger manually
+  workflow_dispatch:
+  push: {branches: ["test"]}
 
 jobs:
   metrics:
@@ -24,21 +27,11 @@ jobs:
         token: ${{ secrets.METRICS_TOKEN }}
         base: ""
         plugin_habits: yes
-        plugin_habits_facts: no
+        plugin_habits_facts: yes
         plugin_habits_charts: yes
+        plugin_habits_days: 90
         config_timezone: Europe/Amsterdam
-
-    - name: 'Recent posts with descriptions and cover images'
-      uses: a-nldisr/metrics@v3.22
-      with:
-        filename: posts.svg
-        token: NOT_NEEDED
-        base: ""
-        plugin_posts: yes
-        plugin_posts_source: 0to1.nl
-        plugin_posts_limit: 2
-        plugin_posts_descriptions: yes
-        plugin_posts_covers: yes
+        delay: 120
 
     - name: 'Recently starred'
       uses: a-nldisr/metrics@v3.22
