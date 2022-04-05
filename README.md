@@ -12,5 +12,5 @@
 
 
 
-<p align="center"><img align="center" width="50%" height="50%" src="https://profile-counter.glitch.me/a-nldisr/count.svg" /></p> 
+<p align="center"><img align="center" width="10%" height="10%" src="https://profile-counter.glitch.me/a-nldisr/count.svg" /></p> 
 
