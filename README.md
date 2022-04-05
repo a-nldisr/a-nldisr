@@ -7,9 +7,6 @@
 </a>
 
 <a href="https://github.com/a-nldisr">
-  <img align="center" width="49%" src="./posts.svg" />
-</a>
-<a href="https://github.com/a-nldisr">
   <img align="center" width="49%" src="./stars.svg" />
 </a>
 
