@@ -1,0 +1,42 @@
+---
+name: 'Metrics'
+on:
+  # Cron schedule every day at 4:20 AM
+  schedule: [{cron: "20 4 * * *"}]
+
+  # Run on push to test branch to trigger manually
+  workflow_dispatch:
+  push: {branches: ["test"]}
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Metrics terminal'
+      uses: a-nldisr/metrics@v3.22
+      with:
+        template: terminal
+        filename: terminal.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        base: header, metadata
+
+    - name: 'Habits Charts'
+      uses: a-nldisr/metrics@v3.22
+      with:
+        filename: habits.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        base: ""
+        plugin_habits: yes
+        plugin_habits_facts: yes
+        plugin_habits_charts: yes
+        plugin_habits_days: 90
+        config_timezone: Europe/Amsterdam
+        delay: 120
+
+    - name: 'Recently starred'
+      uses: a-nldisr/metrics@v3.22
+      with:
+        filename: stars.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        base: ""
+        plugin_stars: yes
