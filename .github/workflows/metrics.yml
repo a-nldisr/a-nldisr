@@ -1,0 +1,7 @@
+- name: Metrics embed
+  uses: a-nldisr/metrics@v3.22
+  with:
+    template: terminal
+    filename: metrics.terminal.svg
+    token: ${{ secrets.METRICS_TOKEN }}
+    base: header, metadata
