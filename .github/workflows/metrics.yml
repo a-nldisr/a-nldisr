@@ -6,7 +6,7 @@ on:
 #  schedule: [{cron: "0 * * * *"}]
 
 jobs:
-  achievements:
+  metrics:
     runs-on: ubuntu-latest
     steps:
     - name: 'Metrics terminal'
@@ -16,3 +16,34 @@ jobs:
         filename: terminal.svg
         token: ${{ secrets.METRICS_TOKEN }}
         base: header, metadata
+
+    - name: 'Habits Charts'
+      uses: a-nldisr/metrics@v3.22
+      with:
+        filename: habits.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        base: ""
+        plugin_habits: yes
+        plugin_habits_facts: no
+        plugin_habits_charts: yes
+        config_timezone: Europe/Amsterdam
+
+    - name: 'Recent posts with descriptions and cover images'
+      uses: a-nldisr/metrics@v3.22
+      with:
+        filename: posts.svg
+        token: NOT_NEEDED
+        base: ""
+        plugin_posts: yes
+        plugin_posts_source: 0to1.nl
+        plugin_posts_limit: 2
+        plugin_posts_descriptions: yes
+        plugin_posts_covers: yes
+
+    - name: 'Recently starred'
+      uses: a-nldisr/metrics@v3.22
+      with:
+        filename: stars.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        base: ""
+        plugin_stars: yes
