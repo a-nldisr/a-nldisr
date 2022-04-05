@@ -1,14 +1,14 @@
 ---
 name: 'Metrics'
 on:
-  schedule: [{cron: "0 * * * *"}]
+#  schedule: [{cron: "0 * * * *"}]
   workflow_dispatch: {}
 
 jobs:
   achievements:
     runs-on: ubuntu-latest
     steps:
-    - name: Metrics embed
+    - name: 'Metrics terminal'
       uses: a-nldisr/metrics@v3.22
       with:
         template: terminal
