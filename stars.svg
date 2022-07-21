@@ -23,7 +23,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>frabjous/knap</span>
-                                        <span>starred 4 days ago</span>
+                                        <span>starred 5 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Neovim plugin for creating live-updating-as-you-type previews of LaTeX, markdown, and other files in the viewer of your choice.</div>
@@ -76,7 +76,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>hibiken/asynq</span>
-                                        <span>starred 4 days ago</span>
+                                        <span>starred 5 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Simple, reliable, and efficient distributed task queue in Go</div>
@@ -129,7 +129,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>k8ssandra/cass-operator</span>
-                                        <span>starred 4 days ago</span>
+                                        <span>starred 5 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">The DataStax Kubernetes Operator for Apache Cassandra</div>
@@ -182,7 +182,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>pyther/goeap_proxy</span>
-                                        <span>starred 28 days ago</span>
+                                        <span>starred 29 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">EAP Proxy written in Go</div>
